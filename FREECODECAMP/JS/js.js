@@ -38,3 +38,26 @@ console.log(rows);
 //получаем индекс последнего элемента в массиве
 rows[rows.length - 1];
 
+//Step 24
+let cities = ["London", "New York", "Mumbai"];
+console.log(cities)
+cities[2] = "Mexico City";
+console.log(cities)
+
+//Step 26
+//метод .push(). Он позволяет "засунуть" значение в конец массива.
+let rows = ["Naomi", "Quincy", "CamperChan"];
+rows.push("freeCodeCamp")
+console.log(rows);
+
+//Step 27
+//метод .pop(). Он удаляет последний элемент из массива и возвращает его.
+let rows = ["Naomi", "Quincy", "CamperChan"];
+rows.push("freeCodeCamp");
+console.log(rows);
+let popped;
+rows.pop()
+console.log(popped);
+
+//Шаг 28
+//Назначьте существующий rows.push() новой отправленной переменной и зарегистрируйте ее.
