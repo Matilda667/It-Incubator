@@ -14,3 +14,9 @@ let count = 8;
 //Step 16
 let count = 8;
 console.log(count + 1);
+
+//Step 18
+let rows = [];
+
+//Step 19
+let rows = ["Naomi", "Quincy", "CamperChan"];
