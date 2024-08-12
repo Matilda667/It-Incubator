@@ -20,3 +20,7 @@ let rows = [];
 
 //Step 19
 let rows = ["Naomi", "Quincy", "CamperChan"];
+
+//Step 20
+let rows;
+console.log(rows[0]);
