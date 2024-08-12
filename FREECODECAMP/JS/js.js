@@ -24,3 +24,17 @@ let rows = ["Naomi", "Quincy", "CamperChan"];
 //Step 20
 let rows;
 console.log(rows[0]);
+
+//Step 21
+//этот код присвоит число 25 второму элементу в массиве:
+let array = [1, 2, 3];
+array[1] = 25;
+console.log(array); prints[1, 25, 3]
+
+rows[2] = 10;
+console.log(rows);
+
+//Step 22
+//получаем индекс последнего элемента в массиве
+rows[rows.length - 1];
+
