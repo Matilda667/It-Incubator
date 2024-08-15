@@ -37,7 +37,8 @@ body {
 .gallery {
   display: flex;
   flex-direction: row;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
+  justify-content:center;
 }
 
 /*Flexbox має головну та поперечну осі. Головна вісь визначається властивістю flex-direction, яка має чотири можливі значення:
