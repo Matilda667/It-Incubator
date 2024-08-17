@@ -17,6 +17,7 @@ img {
   width: 100%;
   max-width: 350px;
   height: 300px;
+  object-fit: cover;
 }
 
 body {
@@ -40,12 +41,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: 20px 10px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
-
-/*Flexbox має головну та поперечну осі. Головна вісь визначається властивістю flex-direction, яка має чотири можливі значення:
-
-row (за замовчуванням): горизонтальна вісь з гнучкими елементами зліва направо
-row-reverse: горизонтальна вісь з гнучкими елементами справа наліво
-column: вертикальна вісь з гнучкими елементами зверху вниз
-column-reverse: вертикальна вісь з гнучкими елементами знизу вгору//
-
