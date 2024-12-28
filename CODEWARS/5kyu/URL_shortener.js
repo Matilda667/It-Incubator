@@ -30,25 +30,23 @@ class UrlShortener {
 
     // Метод для генерации короткого URL
     generateShortUrl() {
+        let count = this.urlCount++;
         let shortUrl = '';
-        let count = this.urlCount;
+
         do {
-            shortUrl = '';
-            for (let i = 0; i < 4; i++) {
-                shortUrl += this.alphabet[count % this.alphabet.length];
-                count = Math.floor(count / this.alphabet.length);
-            }
-        } while (this.urlMap.has(shortUrl)); // Проверяем, не существует ли уже такой короткий URL
-        this.urlCount++;
+            shortUrl = this.alphabet[count % this.alphabet.length] + shortUrl;
+            count = Math.floor(count / this.alphabet.length);
+        } while (count > 0);
+
         return this.baseUrl + shortUrl;
     }
 
     // Метод для сокращения длинного URL
     shorten(longURL) {
-        // Проверяем, существует ли уже длинный URL
-        for (const [key, value] of this.urlMap) {
-            if (value === longURL) {
-                return key; // Возвращаем уже существующий короткий URL
+        // Если длинный URL уже существует, возвращаем соответствующий короткий URL
+        for (const [shortUrl, url] of this.urlMap) {
+            if (url === longURL) {
+                return shortUrl;
             }
         }
 
@@ -59,7 +57,7 @@ class UrlShortener {
 
     // Метод для перенаправления с короткого URL на длинный URL
     redirect(shortURL) {
-        return this.urlMap.get(shortURL); // Возвращаем длинный URL, если он существует
+        return this.urlMap.get(shortURL) || null; // Возвращаем длинный URL или null, если не найден
     }
 }
 
